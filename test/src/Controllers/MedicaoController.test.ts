@@ -16,6 +16,12 @@ jest.mock("../../../src/services/GuardaMedicao", ()=>{
     }
 })
 
+jest.mock("../../../src/services/AvisaTratamento", ()=>{
+    return {
+        avisar: jest.fn()
+    }
+})
+
 jest.mock("../../../src/services/EstruturaDados", ()=>{
     return {
         estruturar: jest.fn((req:Request)=>{
