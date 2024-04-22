@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import GuardaMedicao from "../services/GuardaMedicao";
 import EstruturaDados from "../services/EstruturaDados";
+import AvisaTratamento from "../services/AvisaTratamento";
+
 
 class MedicaoController{
 
@@ -11,6 +13,7 @@ class MedicaoController{
         }catch(error){
             return res.status(400).send(error)
         }
+        await AvisaTratamento.avisar()
         res.status(200).send()
     }
 
