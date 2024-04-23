@@ -16,6 +16,7 @@ jest.mock("../../../src/services/GuardaMedicao", ()=>{
     }
 })
 
+
 jest.mock("../../../src/services/AvisaTratamento", ()=>{
     return {
         avisar: jest.fn()
