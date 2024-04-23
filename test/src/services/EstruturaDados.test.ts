@@ -3,7 +3,7 @@ import { Request } from "express"
 
 let reqCerto = {
     body:{
-        codigoIdentificacao: "2",
+        uuid: "2",
         temp: 23.2,
         pluv: 1024,
         unix:1676059,
@@ -24,7 +24,7 @@ describe("Teste de Estruturação das medicoes", ()=>{
     test("Medicao na estrutura certa", ()=>{
         let response = reqCerto as Request
         let medicaoEstruturada = EstruturaDados.estruturar(response)
-        expect(medicaoEstruturada.codigoIdentificacao).toBe("2")
+        expect(medicaoEstruturada.uuid).toBe("2")
         expect(medicaoEstruturada.medicoes.temp).toBe(23.2)
         expect(medicaoEstruturada.medicoes.pluv).toBe(1024)
     })
