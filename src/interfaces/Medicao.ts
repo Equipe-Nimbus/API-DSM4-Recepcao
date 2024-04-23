@@ -1,6 +1,6 @@
 export default interface Medicao{
 
-    codigoIdentificacao:string,
+    uuid:string,
     unix:number,
     bateria:number,
     medicoes:any

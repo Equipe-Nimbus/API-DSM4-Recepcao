@@ -3,7 +3,6 @@ import GuardaMedicao from "../services/GuardaMedicao";
 import EstruturaDados from "../services/EstruturaDados";
 import AvisaTratamento from "../services/AvisaTratamento";
 
-
 class MedicaoController{
 
     async guardar(req:Request, res:Response) {
