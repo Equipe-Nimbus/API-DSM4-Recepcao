@@ -7,8 +7,8 @@ class SalvaMedicao{
     async salvar(medicao:Medicao){
         await MongoDB.connect()
         const colecaoMedicao = MongoDB.db("MedicoesNimbus").collection("MedicoesNimbus");
-        colecaoMedicao.insertOne(medicao)
-       
+        await colecaoMedicao.insertOne(medicao)
+        await MongoDB.close()
     }
 
 }
