@@ -3,13 +3,13 @@ import Medicao from "../interfaces/Medicao"
 class EstruturaDados{
 
     estruturar(req:Request):Medicao{
-        if(req.body.uuid == undefined ||
+        if(req.body.idPlacaEstacao == undefined ||
             req.body.unix == undefined ||
             req.body.bateria == undefined)
             throw new Error("Estrutura de dados errada")
         let medicao:Medicao = {
             bateria: req.body.bateria,
-            uuid:req.body.uuid,
+            idPlacaEstacao:req.body.idPlacaEstacao,
             unix:req.body.unix,
             medicoes:{}
         }
