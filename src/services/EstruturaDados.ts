@@ -14,7 +14,7 @@ class EstruturaDados{
             medicoes:{}
         }
         for(let chave in req.body){
-            if(chave != "uuid" && chave != "unix" && chave != "bateria")
+            if(chave != "idPlacaEstacao" && chave != "unix" && chave != "bateria")
                 medicao.medicoes[chave] = req.body[chave]
         }
 
