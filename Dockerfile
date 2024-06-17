@@ -1,20 +1,19 @@
-# Imagem base
-FROM node:18-alpine
+FROM node:20-alpine
 
-# Diretório de trabalho
+# Defina o diretório de trabalho
 WORKDIR /app
 
-# Copiar package.json e package-lock.json
+# Copie os arquivos package.json e package-lock.json
 COPY package*.json ./
 
-# Instalar dependências
+# Instale as dependências
 RUN npm install
 
-# Copiar o restante do código-fonte
+# Copie o restante do código da aplicação
 COPY . .
 
 # Porta que a aplicação vai expor
-EXPOSE 8001
+EXPOSE 8000
 
-# Comando para iniciar a aplicação
-CMD ["npm", "run", "dev"]
+# Comando para rodar a aplicação
+CMD ["sh", "-c", "npm run dev"]
