@@ -9,7 +9,6 @@ class SalvaMedicao{
         const colecaoMedicao = MongoDB.db("MedicoesNimbus").collection("MedicoesNimbus");
         await colecaoMedicao.insertOne(medicao)
         await MongoDB.close()
-        console.log(medicao)
     }
 
 }

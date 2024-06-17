@@ -19,6 +19,7 @@ app.use(cors(corsOptions));
 app.use("/medicao", routerMedicao)
 
 const PORT = 8001;
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });

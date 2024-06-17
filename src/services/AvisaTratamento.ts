@@ -1,6 +1,7 @@
 import axios from "axios";
 import { response } from "express";
 
+
 class AvisaTratamento {
 
     async avisar() {
@@ -11,3 +12,4 @@ class AvisaTratamento {
 }
 
 export default new AvisaTratamento();
+
